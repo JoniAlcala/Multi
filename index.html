@@ -23,6 +23,7 @@
         max-width: 60vh;
         cursor: pointer;
         border: 5px solid black;
+        
       }
       .joni{
         position: absolute;
@@ -87,10 +88,18 @@
         position: absolute;
         top: calc(50% - 50px);
         left: calc(50% - 200px);
+        display: flex;
+        align-items: center;
       }
 
       .hide {
         display: none;
+      }
+      .imagenes{
+        width: 50px;
+        display: flex;
+        justify-content:space-between;
+        
       }
       
     </style>
@@ -104,6 +113,10 @@
       <div id="verde" class="color verde right" data-color="verde"></div>
       <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
     </div>
+    <footer><div>
+         <a href="https://www.facebook.com/jonii.alejandro"> <img class="imagenes" src="./imagenes/facebook.png" alt=""></a>
+         <a href="https://www.instagram.com/alcala_98/?hl=es-la"><img  class="imagenes"src="./imagenes/instagram.png" alt=""></a></div>
+        </footer>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js'></script>
     <script>
       //Estos son los botones del juego
@@ -228,13 +241,13 @@
                 }
             }
            
-            ganoElJuego(){swal('GANASTE !!')
+            ganoElJuego(){swal('GANASTE ','holas','youtube')
             .then(()=>{
               this.inicializar()
             })
           }
            perdioElJuego(){
-             swal('Perdiste!! CONCENTRATE!!')
+             swal('Perdiste!! CONCENTRATE!!','holas','sadasd')
              .then(()=>{
                this.eliminarEventosClick()
                this.inicializar()
